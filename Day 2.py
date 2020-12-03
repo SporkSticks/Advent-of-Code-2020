@@ -1,4 +1,4 @@
-day2_file = open("C:/Users/zstavrakas/Desktop/Advent of Code 2020/Input Files/2.1.txt", 'r')
+day2_file = open("C:/Users/[REDACTED]/Desktop/Advent of Code 2020/Input Files/2.1.txt", 'r')
 
 # put all the passwords into a single list
 raw_passwords = day2_file.read()
