@@ -1,4 +1,4 @@
-day1_file = open("C:/Users/zstavrakas/Desktop/Advent of Code 2020/Input Files/1.1.txt", 'r')
+day1_file = open("C:/Users/[REDACTED]/Desktop/Advent of Code 2020/Input Files/1.1.txt", 'r')
 
 # put all the entries in a single list of integer values
 entries = []
