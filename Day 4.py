@@ -1,5 +1,5 @@
 import re
-day4_file = open("C:/Users/zstavrakas/Desktop/Advent of Code 2020/Input Files/4.1.txt", 'r')
+day4_file = open("C:/Users/[REDACTED]/Desktop/Advent of Code 2020/Input Files/4.1.txt", 'r')
 content = day4_file.read().split("\n\n")
 
 # go through each line, replacing newline spaces, splitting each key value pair up, and assigning them into a unique dictionary
