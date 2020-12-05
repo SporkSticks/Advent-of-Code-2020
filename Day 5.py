@@ -1,4 +1,4 @@
-day4_file = open("C:/Users/zstavrakas/Desktop/Advent of Code 2020/Input Files/5.1.txt", 'r')
+day4_file = open("C:/Users/[REDACTED]/Desktop/Advent of Code 2020/Input Files/5.1.txt", 'r')
 content = day4_file.read()
 boarding_pass_list = content.split()
 
