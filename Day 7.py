@@ -1,4 +1,4 @@
-day7_file = open("C:/Users/zstavrakas/Desktop/Advent of Code 2020/Input Files/7.1.txt", 'r')
+day7_file = open("C:/Users/[REDACTED]/Desktop/Advent of Code 2020/Input Files/7.1.txt", 'r')
 content = day7_file.read().replace('.', '').split('\n')
 
 # generate a dictionary of bag dicts in the form --> {colour: {colour:num, colour:num}, colour: {colour:num}, ...}
