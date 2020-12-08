@@ -1,4 +1,4 @@
-day8_file = open("C:/Users/zstavrakas/Desktop/Advent of Code 2020/Input Files/8.1.txt", 'r')
+day8_file = open("C:/Users/[REDACTED]/Desktop/Advent of Code 2020/Input Files/8.1.txt", 'r')
 content = day8_file.read().split('\n')
 
 # PART 1
