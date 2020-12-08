@@ -1,4 +1,4 @@
-day6_file = open("C:/Users/zstavrakas/Desktop/Advent of Code 2020/Input Files/6.1.txt", 'r')
+day6_file = open("C:/Users/[REDACTED]/Desktop/Advent of Code 2020/Input Files/6.1.txt", 'r')
 content = day6_file.read().split('\n\n')
 
 questionnaires = [x.split('\n') for x in content]
