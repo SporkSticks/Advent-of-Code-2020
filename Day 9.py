@@ -1,4 +1,4 @@
-day9_file = open("C:/Users/zstavrakas/Desktop/Advent of Code 2020/Input Files/9.1.txt", 'r')
+day9_file = open("C:/Users/[REDACTED]/Desktop/Advent of Code 2020/Input Files/9.1.txt", 'r')
 content = day9_file.read().split('\n')
 num_inputs = [int(num) for num in content]
 
