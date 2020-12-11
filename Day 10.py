@@ -1,4 +1,4 @@
-day10_file = open("C:/Users/zstavrakas/Desktop/Advent of Code 2020/Input Files/10.1.txt", 'r')
+day10_file = open("C:/Users/[REDACTED]/Desktop/Advent of Code 2020/Input Files/10.1.txt", 'r')
 content = day10_file.read().split('\n')
 joltages = sorted([int(num) for num in content])
 joltages.insert(0, 0) # add in the initial outlet joltage of 0  
