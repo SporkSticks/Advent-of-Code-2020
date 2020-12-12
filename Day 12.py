@@ -35,7 +35,7 @@ def first_soltuion(instruction_list):
 # e.g. F10 as a first instruction will move the ship 10 times --> 100 units east, and 10 north - the waypoint is still locally at (10, 1)
 
 def second_solution(instruction_list):
-    boat_x, boat_y, waypoint_x, waypoint_y, waypoint_rot = 0, 0, 10, 1, 90
+    boat_x, boat_y, waypoint_x, waypoint_y = 0, 0, 10, 1
 
     for instruction in instruction_list:
         operation, value = instruction[0], int(instruction[1:])
