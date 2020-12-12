@@ -15,11 +15,11 @@ def first_soltuion(instruction_list):
     for instruction in instruction_list:
         operation, value = instruction[0], int(instruction[1:])
 
-        if operation in ['N', 'S']:
+        if operation in 'NS':
             boat_y += value * cardinal[operation]   # move up/down
-        elif operation in ['W', 'E']:
+        elif operation in 'WE':
             boat_x += value * cardinal[operation]   # move left/right
-        elif operation in ['L', 'R']:
+        elif operation in 'LR':
             rotation = (rotation + directions[operation] * value) % 360  # rotate the boat and keep the value within 0-270
         elif operation == 'F':
             if rotation == 0 or rotation == 180:  
@@ -40,11 +40,11 @@ def second_solution(instruction_list):
     for instruction in instruction_list:
         operation, value = instruction[0], int(instruction[1:])
 
-        if operation in ['N', 'S']:
+        if operation in 'NS':
             waypoint_y += value * cardinal[operation]
-        elif operation in ['W', 'E']:
+        elif operation in 'WE':
             waypoint_x += value * cardinal[operation]
-        elif operation in ['L', 'R']:
+        elif operation in 'LR':
             rotation = (directions[operation] * value) % 360 # get the rotation as a value representing the clockwise rotation
             if rotation:
                 if rotation == 90:
