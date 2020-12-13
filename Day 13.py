@@ -24,7 +24,7 @@ def second_soltuion(bus_schedule):
 
     # simplified version of the chinese remainder theorem since the remainder values should always be 0 (i.e. time + index % id == 0)
     # work through each value, incrementing using the searching id to find a value which is 0
-    # e.g. [17, x, 13, 19] -- 0 + 0 % 17 == 0 -- 102 + 2 % 13 == 0 -- 3417 + 3 % 19 == 0 -- 3419 is the answer
+    # e.g. [17, x, 13, 19] -- 0 + 0 % 17 == 0 -- 102 + 2 % 13 == 0 -- 3417 + 3 % 19 == 0 -- 3417 is the answer
     for index, bus_id in enumerate(bus_ids):
         if bus_id == 'x':
             continue
