@@ -1,4 +1,4 @@
-day13_file = open("C:/Users/zstavrakas/Desktop/Advent of Code 2020/Input Files/13.1.txt", 'r')
+day13_file = open("C:/Users/[REDACTED]/Desktop/Advent of Code 2020/Input Files/13.1.txt", 'r')
 bus_schedule = day13_file.read().split('\n') 
 
 # PART 1
