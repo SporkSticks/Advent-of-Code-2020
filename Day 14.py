@@ -1,4 +1,4 @@
-day14_file = open("C:/Users/zstavrakas/Desktop/Advent of Code 2020/Input Files/14.1.txt", 'r')
+day14_file = open("C:/Users/[REDACTED]/Desktop/Advent of Code 2020/Input Files/14.1.txt", 'r')
 initialisation_commands = day14_file.read().split('\n') 
 
 # PART 1
