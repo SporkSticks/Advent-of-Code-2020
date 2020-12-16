@@ -1,4 +1,4 @@
-day16_file = open("C:/Users/zstavrakas/Desktop/Advent of Code 2020/Input Files/16.1.txt", 'r')
+day16_file = open("C:/Users/[REDACTED]/Desktop/Advent of Code 2020/Input Files/16.1.txt", 'r')
 train_ticket_document = day16_file.read().split('\n\n')
 
 field_ranges = train_ticket_document[0].split('\n')
