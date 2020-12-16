@@ -72,20 +72,21 @@ def second_solution(fields, personal_ticket, valid_tickets):
                 field_indices[index].append(field)  # add the potential field to this index position's list
 
     # work through the field dictionary, finding the list with only one possible index value all fields are assigned an index
+    # this can be found by checking the length of each indexes fields - starting at the most specific (i.e. n = 1), to the least (n = 20)
     old_fields = set()
     for i in range(len(fields)):
         for index, fields in field_indices.items():
             
             if len(fields) == i:
                 i+=1 
-                confirmed_fields[index] = [x for x in fields if x not in old_fields]   
+                confirmed_fields[index] = [x for x in fields if x not in old_fields]     
                 for field in fields:
                     old_fields.add(field)
-                break
+                break  # move onto the next integer to avoid double counts
 
     # get the values from your own ticket with 'departure' in the field name and calculate their product
     departure_product = 1
-    indices = [k for k, v in confirmed_fields.items() if 'departure' in v[0]]
+    indices = [k for k, v in confirmed_fields.items() if 'departure' in v[0]]  # check if 'departure' is in the string
     
     for index in indices:
         departure_product *= int(personal_ticket[index])
