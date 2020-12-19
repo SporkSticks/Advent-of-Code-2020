@@ -1,6 +1,6 @@
 import numpy as np
 
-day17_file = open("C:/Users/zstavrakas/Desktop/Advent of Code 2020/Input Files/17.1.txt", 'r')
+day17_file = open("C:/Users/[REDACTED]/Desktop/Advent of Code 2020/Input Files/17.1.txt", 'r')
 cube_array = [[list(line) for line in day17_file.read().split('\n')]]
 array_ht, array_wdth, array_dpth, array_4D = len(cube_array[0]), len(cube_array[0][0]), 1, 1  # get the base size of the grid (8x8x1x1)
 
