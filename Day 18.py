@@ -1,7 +1,7 @@
 from rply import ParserGenerator, LexerGenerator  # rply parser/lexer module to define new operator precedence
 from rply.token import BaseBox
 
-day18_file = open("C:/Users/zstavrakas/Desktop/Advent of Code 2020/Input Files/18.1.txt", 'r')
+day18_file = open("C:/Users/[REDACTED]/Desktop/Advent of Code 2020/Input Files/18.1.txt", 'r')
 expressions = day18_file.read().split('\n')
 
 # Generate the lexer/tokeniser to take in inputs and ignore whitespace in the expressions
