@@ -125,7 +125,6 @@ def second_solution(expressions):
 
     parser = pg.build()  # re-build the parser using the updated rule set
 
-
     answer_sum = 0
     for line in expressions:
         answer_sum += parser.parse(lexer.lex(line)).eval()
