@@ -1,7 +1,6 @@
-
 import nltk
 
-day19_file = open("C:/Users/zstavrakas/Desktop/Advent of Code 2020/Input Files/19.1.txt", 'r')
+day19_file = open("C:/Users/[REDACTED]/Desktop/Advent of Code 2020/Input Files/19.1.txt", 'r')
 content = day19_file.read().split('\n\n')
 content[0] = "\n".join(sorted(content[0].replace(':', " ->").split("\n")))
 
