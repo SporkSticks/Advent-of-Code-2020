@@ -1,6 +1,6 @@
 from collections import deque  # provides O(1) time queue functionality vs O(n) for lists
 
-day22_file = open("C:/Users/zstavrakas/Desktop/Advent of Code 2020/Input Files/22.1.txt", 'r')
+day22_file = open("C:/Users/[REDACTED]/Desktop/Advent of Code 2020/Input Files/22.1.txt", 'r')
 content = day22_file.read().split("\n\n")
 
 p1 = deque([int(card) for card in content[0].split("\n")[1:]])
