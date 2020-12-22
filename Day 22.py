@@ -1,6 +1,6 @@
 from collections import deque  # provides O(1) time queue functionality vs O(n) for lists
 
-day22_file = open("C:/Users/[REDACTED]/Desktop/Advent of Code 2020/Input Files/22.1.txt", 'r')
+day22_file = open("C:/Users/zstavrakas/Desktop/Advent of Code 2020/Input Files/22.1.txt", 'r')
 content = day22_file.read().split("\n\n")
 
 p1 = deque([int(card) for card in content[0].split("\n")[1:]])
@@ -32,32 +32,32 @@ def first_solution(p1, p2):
 # using copies of each deck equal in length to the value of the cards played to induce the recursive game - the winner of that game wins the 
 # outer game's round --> return the winner's score using the updated rules!   // note the recursive games take cards from the LEFT of the list
 
-def recursive_combat(p1, p2):
+def recursive_combat(p3, p4):
     prev_rounds = set()
     
-    while p1 and p2:
-        if (tuple(p1), tuple(p2)) in prev_rounds:
-            return 1, 0  # return to indicate player 1 wins
+    while p3 and p4:
+        if (tuple(p3), tuple(p4)) in prev_rounds:
+            return 1, 0  # return to indicate player 1 wins (emulates returning an empty deck for player 2)
         else:
-            prev_rounds.add((tuple(p1), tuple(p2)))
+            prev_rounds.add((tuple(p3), tuple(p4)))
 
-        p1_card, p2_card = p1.popleft(), p2.popleft()
+        p3_card, p4_card = p3.popleft(), p4.popleft()
 
-        if len(p1) >= p1_card and len(p2) >= p2_card:  # enter a recursive game using 
-            rec_p1, rec_p2 = recursive_combat(deque(list(p1)[:p1_card]), deque(list(p2)[:p2_card]))
-            p1.extend([p1_card, p2_card]) if rec_p1 else p2.extend([p2_card, p1_card])
+        if len(p3) >= p3_card and len(p4) >= p4_card:  # enter a recursive game using 
+            rec_p3, rec_p4 = recursive_combat(deque(list(p3)[:p3_card]), deque(list(p4)[:p4_card]))  # get the result of a recursive game
+            p3.extend([p3_card, p4_card]) if rec_p3 else p4.extend([p4_card, p3_card])
 
         else:
-            p1.extend([p1_card, p2_card]) if p1_card > p2_card else p2.extend([p2_card, p1_card])
+            p3.extend([p3_card, p4_card]) if p3_card > p4_card else p4.extend([p4_card, p3_card])
 
-    return p1, p2  # once a game is complete, return the decks - one will be empty
+    return p3, p4  # once a game is complete, return the decks - one will be empty
 
-def second_solution(p1, p2):
-    p1, p2 = recursive_combat(p1, p2)
-    if p1:
-        return f"Player 1 won: {sum([num * (i+1) for num, i in zip(list(p1)[::-1], range(len(p1)))])}"
+def second_solution(p3, p4):
+    p3, p4 = recursive_combat(p3, p4)
+    if p3:
+        return f"Player 1 won: {sum([num * (i+1) for num, i in zip(list(p3)[::-1], range(len(p3)))])}"
     else:
-        return f"Player 2 won: {sum([num * (i+1) for num, i in zip(list(p2)[::-1], range(len(p2)))])}"  # still rigged
+        return f"Player 2 won: {sum([num * (i+1) for num, i in zip(list(p4)[::-1], range(len(p4)))])}"  # still rigged
 
 # tests
 print(first_solution(p1, p2))
