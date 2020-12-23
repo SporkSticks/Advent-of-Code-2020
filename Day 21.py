@@ -1,4 +1,4 @@
-day21_file = open("C:/Users/zstavrakas/Desktop/Advent of Code 2020/Input Files/21.1.txt", 'r')
+day21_file = open("C:/Users/[REDACTED]/Desktop/Advent of Code 2020/Input Files/21.1.txt", 'r')
 content = day21_file.read().split('\n')
 
 # break the input into a manageable form of [ [[ingredients], [allergens]] , [[x], [y]], ... ], store the known allergens in a separate set
