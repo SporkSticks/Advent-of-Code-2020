@@ -28,4 +28,4 @@ def first_solution(starting_nums, final_turn):
 
 # tests
 print(first_solution(puzzle_input, 2020))
-print(first_solution(puzzle_input, 30000000))
+print(first_solution(puzzle_input, 30000000)) 
