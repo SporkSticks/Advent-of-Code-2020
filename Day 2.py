@@ -1,18 +1,12 @@
 day2_file = open("C:/Users/[REDACTED]/Desktop/Advent of Code 2020/Input Files/2.1.txt", 'r')
-
-# put all the passwords into a single list
-raw_passwords = day2_file.read()
-password_list = raw_passwords.split('\n')
+password_list = day2_file.read().split("\n")
 
 # PART 1
 # checks if a given password is valid by checking if the number of times the character appears lays within the range (min-max inclusive)
-def password_check1(min_num, max_num, character, password):
-    return min_num <= password.count(character) <= max_num
-
 
 # tallies up the number of correct passwords from a list by passing the organised values into the password_check function
 # each password is in the form --> "min-max letter: password"
-def pass_counter1(passwords):
+def first_solution(passwords):
     total = 0
 
     for password_data in passwords:
@@ -23,7 +17,7 @@ def pass_counter1(passwords):
         range_data = split_data[0].split("-")
         min_num, max_num = int(range_data[0]), int(range_data[1])
 
-        total += password_check1(min_num, max_num, character, password)
+        total += min_num <= password.count(character) <= max_num
 
     return total
 
@@ -43,7 +37,8 @@ def password_check2(pos1, pos2, character, password):
 
     return pos1true ^ pos2true
 
-def pass_counter2(passwords):
+
+def second_solution(passwords):
     total = 0
 
     for password_data in passwords:
@@ -58,11 +53,6 @@ def pass_counter2(passwords):
 
     return total
 
-
-# test function + cases
-print(pass_counter1(["1-3 a: abcde", "1-3 b: cdefg", "2-9 c: ccccccccc"]))  # should return 2
-print(pass_counter1(password_list))
-
-print(pass_counter2(["1-3 a: abcde", "1-3 b: cdefg", "2-9 c: ccccccccc"])) # should return 1
-print(pass_counter2(["3-11 b: adbc"])) # should return 1
-print(pass_counter2(password_list))
+# tests
+print(first_solution(password_list))
+print(second_solution(password_list))
