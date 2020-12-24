@@ -1,4 +1,4 @@
-day24_file = open("C:/Users/zstavrakas/Desktop/Advent of Code 2020/Input Files/24.1.txt", 'r')
+day24_file = open("C:/Users/[REDACTED]/Desktop/Advent of Code 2020/Input Files/24.1.txt", 'r')
 tiles = day24_file.read().split('\n')
 
 # PART 1
