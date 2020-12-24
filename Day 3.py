@@ -1,4 +1,4 @@
-day3_file = open("C:/Users/zstavrakas/Desktop/Advent of Code 2020/Input Files/3.1.txt", 'r')
+day3_file = open("C:/Users/[REDACTED]/Desktop/Advent of Code 2020/Input Files/3.1.txt", 'r')
 
 # Put the rows into a 2D matrix
 raw_text = day3_file.read()
