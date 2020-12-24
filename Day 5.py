@@ -1,5 +1,5 @@
-day4_file = open("C:/Users/[REDACTED]/Desktop/Advent of Code 2020/Input Files/5.1.txt", 'r')
-content = day4_file.read()
+day5_file = open("C:/Users/[REDACTED]/Desktop/Advent of Code 2020/Input Files/5.1.txt", 'r')
+content = day5_file.read()
 boarding_pass_list = content.split()
 
 # PART 1
@@ -43,9 +43,5 @@ def second_solution(pass_list):
             return ids[i] + 1
 
 # tests
-print(seat_id('BFFFBBFRRR'))  # 567
-print(seat_id('FFFBBBFRRR'))  # 119
-print(seat_id('BBFFBBFRLL'))  # 820
-print(first_solution(['BFFFBBFRRR', 'FFFBBBFRRR', 'BBFFBBFRLL'])) # 820
 print(first_solution(boarding_pass_list))
 print(second_solution(boarding_pass_list))
