@@ -57,7 +57,7 @@ def second_solution(cups):
         else:
             cup_list[cups[i]] = cups[i+1]
 
-    # cups need to be picked up based on their relative position to cup 1 - instead of moving every cup, we just grab their position
+    # cups need to be picked up based on their relative position to their neighbours - instead of moving every cup, we just grab their position
     # using the lookup array in O(1) time --> each neighbouring cup is stored as relative indexes from each other
     
     start = cups[0]  # get the first cup from the original list, then get the three neighbours in sequence
