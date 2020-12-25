@@ -1,4 +1,4 @@
-day25_file = open("C:/Users/zstavrakas/Desktop/Advent of Code 2020/Input Files/25.1.txt", 'r')
+day25_file = open("C:/Users/[REDACTED]/Desktop/Advent of Code 2020/Input Files/25.1.txt", 'r')
 
 # PART 1
 # You get to the hotel but their registration is offline - you cannot use your room key for your 25th floor suite (the elevator is broken)
